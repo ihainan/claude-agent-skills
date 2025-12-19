@@ -1,0 +1,67 @@
+# Fetching GitHub User Data - Skill Summary
+
+## Skill Created Successfully ✓
+
+This skill allows users to fetch comprehensive GitHub user data through a simple command.
+
+## What It Does
+
+Fetches all available GitHub user data including:
+- Profile information
+- Repositories (with detailed statistics)
+- Contributions calendar
+- Pull requests and issues
+- Programming language distribution
+- Social connections
+- Gists and starred repositories
+
+## Files Structure
+
+fetching-github-user-data/
+├── SKILL.md              # Main skill documentation
+├── README.md             # Quick start guide
+├── AUTHENTICATION.md     # How to get GitHub token
+├── EXAMPLES.md           # Usage examples
+├── DATA_ANALYSIS.md      # Data analysis guide
+└── scripts/
+    └── fetch.py          # Main Python script
+
+## Quick Usage
+
+# Basic (no token)
+python scripts/fetch.py torvalds
+
+# With token (recommended)
+export GITHUB_TOKEN="ghp_YOUR_TOKEN"
+python scripts/fetch.py torvalds --output ./my_data
+
+## Output Example
+
+github_user_data/torvalds/
+├── profile.json
+├── repositories/
+├── contributions/calendar.json
+├── pull_requests/created.json
+├── issues/created.json
+├── statistics/
+│   ├── languages.json
+│   └── repositories.json
+└── metadata.json
+
+## Key Features
+
+✓ Complete data coverage (15+ data types)
+✓ Smart organization with clean directory structure
+✓ Programming language statistics
+✓ Contribution calendar (with token)
+✓ Rate limit handling
+✓ Error resilience
+✓ Detailed documentation
+
+## Tested
+
+✓ Script runs successfully
+✓ Fetches data correctly
+✓ Generates proper output structure
+✓ Handles rate limits gracefully
+✓ Documentation complete

@@ -1,6 +1,6 @@
 # Claude Code Skills
 
-This repository contains two Claude Code skills for image generation and upload workflows.
+This repository contains Claude Code skills for various tasks including image generation, image upload, and GitHub data fetching.
 
 ## Skills
 
@@ -40,12 +40,38 @@ python uploading-to-imgur/scripts/upload.py image.png
 
 See [uploading-to-imgur/SKILL.md](uploading-to-imgur/SKILL.md) for detailed documentation.
 
+### 3. fetching-github-user-data
+
+Fetch comprehensive GitHub user data through the GitHub API.
+
+**Features:**
+- User profile and basic information
+- All public repositories with detailed statistics
+- Contributions calendar and activity tracking
+- Pull requests and issues analysis
+- Programming language statistics
+- Social connections (followers, following, organizations)
+- Gists and starred repositories
+
+**Quick start:**
+```bash
+# Without token (public data only)
+python fetching-github-user-data/scripts/fetch.py torvalds
+
+# With GitHub token (recommended, includes contribution calendar)
+export GITHUB_TOKEN="ghp_YOUR_TOKEN"
+python fetching-github-user-data/scripts/fetch.py torvalds
+```
+
+See [fetching-github-user-data/SKILL.md](fetching-github-user-data/SKILL.md) for detailed documentation.
+
 ## Setup
 
-Both skills use environment variables for authentication:
+Skills use environment variables for authentication:
 
 - **generating-images**: Set `OPENROUTER_API_KEY` environment variable
 - **uploading-to-imgur**: Set `IMGUR_CLIENT_ID` environment variable
+- **fetching-github-user-data**: Set `GITHUB_TOKEN` environment variable (optional but recommended)
 
 Refer to each skill's documentation for detailed setup instructions.
 
